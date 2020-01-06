@@ -19,7 +19,7 @@ serviceWorker.register();
 const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhances(applyMiddleware(thunk)));
 
-ReactGA.initialize("UA-155326309-1");
+ReactGA.initialize("UA-155326309-2");
 axios.defaults.baseURL = "https://aire-1.herokuapp.com";
 ReactGA.pageview(window.location.pathname + window.location.search);
 const app = (
