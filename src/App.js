@@ -5,12 +5,6 @@ import BaseRouter from "./routes";
 import { connect } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import * as actions from "./store/actions/auth";
-import ReactGA from "react-ga";
-
-function initializeReactGA() {
-  ReactGA.initialize("UA-155326309-1");
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}
 
 class App extends Component {
   componentDidMount() {
