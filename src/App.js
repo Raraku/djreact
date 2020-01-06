@@ -9,7 +9,6 @@ import * as actions from "./store/actions/auth";
 class App extends Component {
   componentDidMount() {
     this.props.onTryAutoSignup();
-    initializeReactGA();
   }
   render() {
     return (
