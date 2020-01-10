@@ -40,7 +40,13 @@ function Articles(props) {
               key="list-vertical-message"
             />
           ]}
-          extra={<img width={240} alt="logo" src={image} />}
+          extra={
+            <img
+              width={240}
+              alt="logo"
+              src="https://cdn.mangaeden.com/mangasimg/58/588c9f1a6f4aa0373182db56bad9e174eec1954c391fb8470add3381.jpg"
+            />
+          }
         >
           <List.Item.Meta
             avatar={<Avatar src={item.avatar} />}
