@@ -42,7 +42,7 @@ function Articles(props) {
           ]}
           extra={
             <img
-              width={240}
+              style={{ width: "2.4em", height: "3.6em" }}
               alt="logo"
               src="https://cdn.mangaeden.com/mangasimg/58/588c9f1a6f4aa0373182db56bad9e174eec1954c391fb8470add3381.jpg"
               referrerpolicy="no-referrer"
