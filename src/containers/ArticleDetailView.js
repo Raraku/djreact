@@ -4,6 +4,8 @@ import axios from "axios";
 import { Card } from "antd";
 import CustomForm from "../components/Form";
 import { Button, Form, Alert } from "react-bootstrap";
+import { Helmet } from "react-helmet";
+
 class ArticleDetail extends React.Component {
   constructor(props) {
     super(props);
