@@ -1,6 +1,5 @@
 import React from "react";
 import { List, Avatar, Icon } from "antd";
-import image from "./background.svg";
 
 const IconText = ({ type, text }) => (
   <span>

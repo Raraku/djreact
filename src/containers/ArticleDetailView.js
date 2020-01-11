@@ -21,7 +21,7 @@ class ArticleDetail extends React.Component {
         Authorization: `Token ${newProps.token}`
       };
       const articleID = this.props.match.params.articleID;
-      axios.get(`/api/${articleID}/`).then(res => {
+      axios.get(`/api/${articleID}/`).then((res) => {
         this.setState({
           article: res.data
         });
@@ -31,14 +31,14 @@ class ArticleDetail extends React.Component {
 
   componentDidChange() {
     const articleID = this.props.match.params.articleID;
-    axios.get(`/api/${articleID}/`).then(res => {
+    axios.get(`/api/${articleID}/`).then((res) => {
       this.setState({
         article: res.data,
         response: ""
       });
     });
   }
-  handleDelete = event => {
+  handleDelete = (event) => {
     event.preventDefault();
     if (this.props.token !== null) {
       const articleID = this.props.match.params.articleID;
@@ -63,6 +63,17 @@ class ArticleDetail extends React.Component {
     if (this.state.show === false) {
       return (
         <div>
+          <Helmet>
+            <title>Articreator - Article</title>
+            <meta
+              name="keywords"
+              content="Article, creator, articreator, djreact, netlify"
+            />
+            <meta
+              name="description"
+              content="Create and access public articles quick and easily."
+            />
+          </Helmet>
           <Card title={this.state.article.title}>
             <p>{this.state.article.content}</p>
           </Card>
@@ -90,7 +101,7 @@ class ArticleDetail extends React.Component {
     }
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     token: state.token
   };

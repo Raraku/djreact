@@ -4,6 +4,7 @@ import axios from "axios";
 import CustomForm from "./../components/Form";
 import { connect } from "react-redux";
 import suspensefallback from "./Bean.svg";
+import { Helmet } from "react-helmet";
 
 class ArticleList extends React.Component {
   constructor(props) {
@@ -28,6 +29,17 @@ class ArticleList extends React.Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Articreator - Create awesome articles Easily</title>
+          <meta
+            name="keywords"
+            content="Article, creator, articreator, djreact, netlify"
+          />
+          <meta
+            name="description"
+            content="Create and access public articles quick and easily."
+          />
+        </Helmet>
         {this.state.isLoading ? (
           <div className="suspense">
             <img src={suspensefallback} alt="Articles are loading" />
